@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #S{
+        background-color: salmon;
+      }
+      #E,#F,#G{
+        background-color: grey;
+      }
+    </style>
+</head>
+<body>
+    <table border="1" cellpadding="4px" cellspacing="2px">
+        <tr id="S">
+            <th>Coffee Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+             <th>Total price</th>
+        </tr>
+        <tr id="E">
+            <td>Hot chocolate</td>
+            <td>2000</td>
+            <td><input type="number" name="" id="HC" onchange="BC()"></td>
+            <td><input type="number" name="" id="HCH"></td>
+        </tr>
+        <tr id="F">
+            <td>Americano</td>
+            <td>3000</td>
+            <td><input type="number" name="" id="A" onchange="BC()"></td>
+            <td><input type="number" name="" id="AM"></td>
+        </tr>
+        <tr id="G">
+            <td>Latte</td>
+            <td>1000</td>
+            <td><input type="number" name="" id="B" onchange="BC()"></td>
+            <td><input type="number" name="" id="LA"></td>
+        </tr>
+    </table><br>
+    <input type="number" name="" id="total" readonly>
+    <input type="submit" name="" id="" onclick="AB()">
+
+    <script>
+    function AB()
+    {
+        let HC=document.getElementById('HC').value;
+        let A=document.getElementById('A').value;
+        let B=document.getElementById('B').value;
+        let c=HC*2000+A*3000+B*1000;
+        let total=document.getElementById('total').value=c;
+
+    }
+    function BC()
+    {
+        let HC=document.getElementById('HC').value;
+        let d= HC*2000;
+        let tot=document.getElementById('HCH').value=d;
+       
+        let A= document.getElementById('A').value;
+        let e= A*3000;
+        let totl=document.getElementById('AM').value=e;
+
+        let B= document.getElementById('B').value;
+        let f= B*1000;
+        let total=document.getElementById('LA').value=f;
+
+    
+    }
+    </script>
+</body>
+</html>

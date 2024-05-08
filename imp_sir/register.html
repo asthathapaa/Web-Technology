@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"&gt;
+    <title>Document</title>
+    <style>
+        body{  
+  font-family: "Sofia", sans-serif;
+  text-shadow: 3px 3px 3px #ababab;
+
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+.container{
+    background-color: slategray;
+    width: 20rem;
+    padding: 20px 10px;
+    margin-top:20px;
+    box-shadow: 12px 12px 10px red;
+    border-radius: 10px 20px;
+}  
+.form{
+    background-color: antiquewhite;
+    padding:20px 25px
+}
+.Register{
+    text-align: center;
+    font-size: 30px;
+}
+span{
+    color:red;
+   
+}
+input{
+    width: 90%;
+}
+.name{
+    width: 93%;
+    display: flex;
+    justify-content: center;
+    gap:20px
+}
+.button{
+    background-color:green;
+    width: 200px;
+    margin: 0px 26px;
+    border-radius: 20px ;
+    border-style:none ;
+}
+
+/* @media screen and (max-width:400px){
+    body{
+        background-color: aqua;
+    }
+    .name{
+        flex-direction: column;
+    }
+} */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="Register">
+               Register
+               <br>
+               <span> sign up free</span>
+            </div>
+         
+            <form action="">
+                <div class="name">
+<input type="text" name="" id="" placeholder="Firstname">
+<input type="text" name="" id="" placeholder="Lastname">
+                </div>
+           
+                <input type="Email" name="" id="" placeholder="Email"><br>
+                <input type="password" name="" id="" placeholder="Password">
+                <br>
+                <input type="password" name="" id="" placeholder="Confirm Password">
+                <div>
+                    <div>
+                        Login with
+                        <ion-icon name="logo-google"></ion-icon>
+                        <ion-icon name="logo-facebook" style="font-size: 20px; color: blue;"></ion-icon>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                        <ion-icon name="logo-youtube" style="color: red;"></ion-icon>
+                        <ion-icon name="logo-github"></ion-icon>
+                    </div>
+                    <input type="checkbox" name="" id="" style="width: 20px;">Accept terms & conditions
+                </div>
+                <input type="button" name="" class="button" value="Register">
+            </form>
+        </div>
+
+        <div style="text-align: center;"
+            Already have an account?
+            <a href="">signin</a>
+        </div>
+       
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script&gt;
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script&gt;
+</body>
+</html>
