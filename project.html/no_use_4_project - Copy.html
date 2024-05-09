@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color: black;
+            padding: 30px;
+        }
+        p{
+            color: red;
+            margin: 0px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="welcome.html"  onsubmit="return validate()">
+        <input type="text" name="" id="Name" placeholder="Name" autocomplete="none">
+        <p id="Nameerr"></p>
+        <br>
+        <input type="email" name="" id="Email" placeholder="Email">
+        <p id="Emailerr"></p>
+        <br>
+        <input type="tel" name="" id="Phone" placeholder="Phone no.">
+        <p id="Phoneerr"></p>
+        <br>
+        <input type="password" name="" id="Password" placeholder="Password">
+        <p id="Passerr"></p>
+        <br>
+        <input type="password" name="" id="Cpassword"placeholder="Confirm password">
+        <p id="Cpasserr"></p>
+        <br>
+        <input type="submit" name="" id="">
+    </form>
+    <script>
+      flag=1;
+        function validate()
+        {  
+        //    for name
+        let name=document.getElementById('Name').value;
+        let namereg=/[0-9]{3}[ABC]{3}/;
+        if(name===''||name==null)
+        {
+           document.getElementById('Nameerr').innerHTML= "* name cant be empty";
+           flag= 0;
+        }
+        else if(name.search(namereg)<0)
+        {
+            document.getElementById('Nameerr').innerHTML= "* name pattern is not matched";
+           flag= 0;
+        }
+        else {
+            document.getElementById('Nameerr').innerHTML="";
+            flag= 1;
+        }
+         //    for Email
+         let Email=document.getElementById('Email').value;
+        let Emailreg=/[A-Z0-9]{5}\.[0-9]{3}\@ncit\.edu\.np/gi;
+        if(Email===''||Email==null)
+        {
+           document.getElementById('Emailerr').innerHTML= "*Email cant be empty";
+           flag= 0;
+        }
+        else if(Email.search(Emailreg)<0)
+        {
+            document.getElementById('Emailerr').innerHTML= "*Email pattern is not matched";
+           flag= 0;
+        }
+        else {
+            document.getElementById('Emailerr').innerHTML="";
+            flag= 1;
+        }
+
+
+        //    for Phone
+        let Phone=document.getElementById('Phone').value;
+        let Phonereg=/[0-9]{3}\-[0-9]{3}\-[0-9]{4}/;
+        if(Phone===''||Phone==null)
+        {
+           document.getElementById('Phoneerr').innerHTML= "*Phone cant be empty";
+           flag= 0;
+        }
+        else if(Phone.search(Phonereg)<0)
+        {
+            document.getElementById('Phoneerr').innerHTML= "*Phone pattern is not matched";
+           flag= 0;
+        }
+        else {
+            document.getElementById('Phoneerr').innerHTML="";
+            flag= 1;
+        }
+          //    for Password
+          let Password=document.getElementById('Password').value;
+        let Passwordreg=/[A-Z][@$#]{2}[0-9]{5}/;
+        if(Password===''||Password==null)
+        {
+           document.getElementById('Passerr').innerHTML= "*Password cant be empty";
+           flag= 0;
+        }
+        else if(Password.search(Passwordreg)<0)
+        {
+            document.getElementById('Passerr').innerHTML= "*Password pattern is not matched";
+           flag= 0;
+        }
+        else {
+            document.getElementById('Passerr').innerHTML="";
+            flag= 1;
+        }
+
+        //    for  confirm Password
+        let CPassword=document.getElementById('Cpassword').value;
+     
+        if(CPassword===''||CPassword==null)
+        {
+           document.getElementById('Cpasserr').innerHTML= "* confirm Password cant be empty";
+           flag= 0;
+        }
+        else if(CPassword!=Password)
+        {
+            document.getElementById('Cpasserr').innerHTML= "*confirm Password and password not matched";
+           flag= 0;
+        }
+        else {
+            document.getElementById('Cpasserr').innerHTML="";
+            flag= 1;
+        }
+        if(flag)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+     
+        }
+       
+
+    </script>
+</body>
+</html>
