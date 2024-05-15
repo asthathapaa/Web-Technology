@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <table border="1" cellpadding="4px" cellspacing="2px">
+        <tr id="S">
+            <th>Product name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+             <th>Total price</th>
+        </tr>
+        <tr id="E">
+            <td>French vanila</td>
+            <td>200</td>
+            <td><input type="number" name="" id="HC" onchange="BC()"></td>
+            <td><input type="number" name="" id="HCH"></td>
+        </tr>
+        <tr id="F">
+            <td>Hazelnut</td>
+            <td>300</td>
+            <td><input type="number" name="" id="A" onchange="BC()"></td>
+            <td><input type="number" name="" id="AM"></td>
+        </tr>
+        <tr id="G">
+            <td>Colombian</td>
+            <td>500</td>
+            <td><input type="number" name="" id="B" onchange="BC()"></td>
+            <td><input type="number" name="" id="LA"></td>
+        </tr>
+    </table><br>
+    <input type="number" name="" id="total" readonly>
+    <input type="submit" name="" id="" onclick="AB()">
+
+    <script>
+    function AB()
+    {
+        let HC=document.getElementById('HC').value;
+        let A=document.getElementById('A').value;
+        let B=document.getElementById('B').value;
+        let c=HC*200+A*300+B*500;
+        let total=document.getElementById('total').value=c;
+
+    }
+    function BC()
+    {
+        let HC=document.getElementById('HC').value;
+        let d= HC*200;
+        let tot=document.getElementById('HCH').value=d;
+       
+        let A= document.getElementById('A').value;
+        let e= A*300;
+        let totl=document.getElementById('AM').value=e;
+
+        let B= document.getElementById('B').value;
+        let f= B*500;
+        let total=document.getElementById('LA').value=f;
+
+    
+    }
+    </script>
+</body>
+</html>

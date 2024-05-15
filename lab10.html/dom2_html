@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ 
+  <button id="button">click</button>
+
+  <script>
+    function dosomething()
+    {
+       console.log("You have cilicked me");
+    }
+    document.getElementById("button").addEventListener('dbclick',dosomething,false);
+    
+  </script>
+</body>
+</html>

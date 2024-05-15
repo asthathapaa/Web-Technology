@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="move_img('up')">Up</button><br>
+    <button onclick="move_img('left')">Left</button>
+    <button onclick="move_img('right')">Right</button><br>
+    <button onclick="move_img('down')">Down</button><br>
+    <img src="/1.jpg" height="100px " id="i1" onclick="move_img('')"> 
+
+    <script>
+        function move_img(str) 
+        {
+        var step=50; // change this to different step value
+         switch(str)
+         {
+         case "down":
+         var x=document.getElementById('i1').offsetTop;
+        x= x + step;
+        document.getElementById('i1').style.top= x + "px";
+        break;
+
+         case "up":
+         var x=document.getElementById('i1').offsetTop;
+         x= x-step;
+         document.getElementById('i1').style.top= x + "px";
+         break;
+
+        case "left":
+        var y=document.getElementById('i1').offsetLeft;
+        y= y - step;
+         document.getElementById('i1').style.left= y + "px";
+        break;
+
+        case "right":
+        var y=document.getElementById('i1').offsetLeft;
+         y= y + step;
+        document.getElementById('i1').style.left= y + "px";
+        break;
+         }
+        }
+       </script>
+</body>
+</html>
