@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Write Number of day of a week:</h3>
+    <input type="number" name="" id="days">
+    <button id="button" onclick="Week()">Try it</button>
+    <div id="output"></div> <!-- Added a <div> element to display the result -->
+    <script>
+        function Week() {
+            let week = parseInt(document.getElementById('days').value); // Corrected the getElementById call
+            
+            let outputElement = document.getElementById('output'); // Get the output <div> element
+            
+            switch (week) {
+                case 1:
+                    outputElement.innerHTML = 'Sunday'; // Display the result in the <div> element
+                    break; // Added break to exit the switch after each case
+
+                case 2:
+                    outputElement.innerHTML = 'Monday';
+                    break;
+
+                case 3:
+                    outputElement.innerHTML = 'Tuesday';
+                    break;
+
+                case 4:
+                    outputElement.innerHTML = 'Wednesday';
+                    break;
+
+                case 5:
+                    outputElement.innerHTML = 'Thursday';
+                    break;
+
+                case 6:
+                    outputElement.innerHTML = 'Friday';
+                    break;
+
+                case 7:
+                    outputElement.innerHTML = 'Saturday';
+                    break;
+
+                default:
+                    outputElement.innerHTML = 'Invalid choice';
+            }
+        }
+    </script>
+</body>
+</html>

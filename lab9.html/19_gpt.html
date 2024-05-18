@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Table</title>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
+</head>
+<body>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody id="familyTableBody">
+    <!-- Table rows will be added here using JavaScript -->
+  </tbody>
+</table>
+
+<script>
+const familyData = [
+  { id: 1, name: 'John', gender: 'Male', salary: 50000 },
+  { id: 2, name: 'Jane', gender: 'Female', salary: 60000 },
+  { id: 3, name: 'Alex', gender: 'Male', salary: 55000 },
+  // Add more family members as needed
+];
+
+const tableBody = document.getElementById('familyTableBody');
+
+familyData.forEach(member => {
+  const row = document.createElement('tr');
+  
+  const idCell = document.createElement('td');
+  idCell.textContent = member.id;
+  row.appendChild(idCell);
+  
+  const nameCell = document.createElement('td');
+  nameCell.textContent = member.name;
+  row.appendChild(nameCell);
+  
+  const genderCell = document.createElement('td');
+  genderCell.textContent = member.gender;
+  row.appendChild(genderCell);
+  
+  const salaryCell = document.createElement('td');
+  salaryCell.textContent = member.salary;
+  row.appendChild(salaryCell);
+  
+  tableBody.appendChild(row);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var bordersize;
+        bordersize = prompt("Select a table border size \n"+
+                           "0 (no border)\n")+"1(1 pixel border)\n"+
+                           "4 (4 pixel border)\n";
+                           "8 (8 pixel border)\n";
+        switch(bordersize)
+        {
+            case"0": 
+            document.write("<table>");
+             break;
+            case "1":
+            document.write( "<table border ='1'>");
+            break;
+            case "4":
+            document.write( "<table border ='4'>");
+            break;
+            case "8":
+            document.write( "<table border ='8'>");
+            break;
+
+            default: document.write("Invalid choice","<br>");
+        }
+        document.write("<caption> 2008 NFL Divisonal","Winners </caption>")
+        document.write("<tr>","<th/>",
+            "<table border='1'>",
+            "<th> </th>",
+            "<th> American Conference </th>",
+            "<th> National Conference </th>",
+            "<tr>",
+            "<th> East </th>",
+            "<td> Miami Dolphins </td>",
+            "<td> New York Giants </td>",
+            "</tr>",
+            "<tr>",
+            "<th> North </th>",
+            "<td> Miami Dolphins </td>",
+            "<td> New York Giants </td>",
+            "</tr>",
+            "<tr>",
+            "<th> West </th>",
+            "<td> Miami Dolphins </td>",
+            "<td> New York Giants </td>",
+            "</tr>",
+            "<tr>",
+            "<th> South </th>",
+            "<td> Miami Dolphins </td>",
+            "<td> New York Giants </td>",
+            "</tr>",
+            "</table>");
+
+    </script>
+</body>
+</html>
