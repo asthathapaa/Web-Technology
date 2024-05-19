@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //let num=Number(prompt('Enter a number'))
+        // let num=32324;
+        // let reverse=0;
+        // let lastdigit;
+
+        // while(num!=0)
+        // {
+        //     lastdigit=num%10;
+        //     reverse=reverse*10 + lastdigit;
+        //     num=Math.floor(num/10);
+        // }
+        // console.log("Reverse number : ",reverse,num);
+
+        function reverse_a_number(num) {
+  let reversed_num = 0;
+  while (num !== 0) {
+    reversed_num = reversed_num * 10 + num % 10;
+    num = Math.floor(num / 10);
+  }
+  return reversed_num;
+}
+const num = 12345;
+console.log("Original number: "+num);
+const result = reverse_a_number(num);
+console.log("Reversed number: "+result);
+    </script>
+</body>
+</html>

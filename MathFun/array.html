@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let a=[19.35,55,'astha',222,'apple']
+        // console.log(a);
+        // let b=new Array(3,4,5,'ball','bat')
+        let fruits=['Mango','Orange','Banana','Apple','Strawberry']
+          let vegetable=['Potato','Tomato','Saag','Cauli']
+          let num=[100,3,1,5,10,11,12,1323434,432]
+        // console.log(b);
+        // console.log(typeof(b));
+        // console.log(a[2]);
+        // console.log(a[6]);
+        // console.log(a.length);
+        // document.write('<ul>')
+        // for(let i=0; i<a.length; i++)
+        // {
+        //     document.write('<li>')
+        //     document.write(a[i]);
+        //     document.write('<li>')
+        // }
+        // document.write('</ul>')
+
+    //     document.write(fruits.length);
+    //     document.write('<br>');
+    //    fruits[1]='Grapes';
+    //    document.write(fruits);
+    //    fruits.push('Apple','Strawberry');
+    //    document.write('<br>');
+    //    document.write(fruits);
+    //    document.write('<br>');
+    //   document.write( fruits.pop());
+    //   delete fruits[2];
+    //   document.write('<br>');
+    //   document.write(fruits)
+    //   document.write('<br>');
+    //   document.write(fruits[2])
+
+    //   document.write(fruits.shift())
+    //   document.write('<br>');
+    //   document.write(fruits)
+    //   document.write(fruits.unshift('starfruit'))
+    //   document.write('<br>');
+    //   document.write(fruits)
+    //   document.write('<br>');
+    //   document.write(fruits.join('**-**'))
+    //   document.write('<br>');
+
+    //   let vegetable=['Potato','Tomato','Saag','Cauli']
+    //   document.write(fruits.concat(vegetable))
+    //   document.write('<br>');
+    //   document.write(fruits.concat('radish'))
+      
+      let c=fruits.slice(-4,-1);
+      document.write(c)
+
+    //   let c=fruits.splice(1,5,'A','naspati')
+    //   console.log(c)
+    //   console.log(fruits)
+      let compare=(a,b)=>{
+        return b-a;
+      }
+    //   let a=num.sort(compare);
+    //   console.log(a[0])
+    console.log(fruits.sort(compare))
+
+   console.log( fruits.includes('Orange'))
+   console.log(Array.isArray(fruits))
+      
+    </script>
+</body>
+</html>

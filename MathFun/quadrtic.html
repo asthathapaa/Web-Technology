@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+     let a=Number(prompt('Enter coefficient of a'));
+     let b=Number(prompt('Enter coefficient of b'));
+     let c=Number(prompt('Enter coefficient of c'));
+     let d=(b*b-4*a*c);
+     let e=Math.sqrt(b*b-4*a*c)
+     if(d<0)
+     {
+     document.write('Real root is imaginary')
+     }
+     else if(d==0)
+     {
+     document.write('Roots are real and equal')
+     document.write('<br>')
+     document.write('r1=r2=',-b/(2*a))
+
+    }
+    else
+     {
+     document.write('Roots are real but not equal')
+     document.write('<br>')
+     document.write('r1=',(-b+e)/(2*a))
+     document.write('<br>')
+     document.write('r21=',(-b-e)/(2*a))
+
+    }
+     </script>
+</body>
+</html>

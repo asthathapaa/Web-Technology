@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #clock{
+            align-content: center;
+            background-color: rgb(124, 149, 174);
+            color: antiquewhite;
+            height: 50px;
+            width: 75px;
+            border-radius: 5px;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+    <script id="A" >
+        function clock()
+        {
+        let time=new Date();
+        let hour= time.getHours();
+        let min=time.getMinutes();
+        let sec= time.getSeconds();
+        let meri="AM";
+
+        if(hour>12)
+        {
+            hour-=12;
+            meri="PM";
+        }
+        if(hour==0)
+        {
+            hour=12;
+        }
+        if(min<10)
+        {
+         min="0"+min;
+        }
+        if(sec<10)
+        {
+            sec="0"+sec;
+        }
+        let ghadi=hour+":"+min+":"+sec+meri;
+        document.getElementById("clock").innerHTML=ghadi;
+
+        document.write(hour,":",min,":",sec);
+        let mili=time.getMilliseconds();
+        let month =time.getMonth();
+        let year= time.getFullYear();
+
+        // document.write(time);
+        // document.write('<br>');
+        // document.write(hour);
+        // document.write('<br>');
+        // document.write(minute);
+        // document.write('<br>');
+        // document.write(sec);
+        // document.write('<br>');
+        // document.write(mili);
+        // document.write('<br>');
+        // document.write(month)
+        // document.write('<br>');
+        // document.write(year);
+    }
+    setInterval(clock,1000)
+    </script>
+</body>
+</html>
